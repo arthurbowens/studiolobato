@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Studio Lobato | Massoterapia em Lourdes, Belo Horizonte</title>
+<meta name="description" content="Massagem relaxante, terapêutica, drenagem linfática, ventosaterapia, pedras quentes e Abhyanga ayurvédica com Gabi Lobato, no bairro Lourdes em BH.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --espresso:#241812;
+  --cacau:#3D2A20;
+  --bronze:#B08A5B;
+  --ouro:#CDAE7E;
+  --areia:#E8DCCB;
+  --creme:#F7F2EA;
+  --salvia:#8E9B84;
+  --terracota:#B5653F;
+  --texto:#3A2E27;
+  --suave:#7A6A5E;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Jost',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);font-weight:300;color:var(--texto);background:var(--creme);line-height:1.7;font-size:17px;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1160px,92%);margin:0 auto}
+.eyebrow{font-family:var(--sans);font-size:.78rem;letter-spacing:.28em;text-transform:uppercase;color:var(--bronze);font-weight:500}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.1;color:var(--espresso)}
+h2{font-size:clamp(2.1rem,4.4vw,3.3rem);margin:.5rem 0 1.2rem}
+h2 em,h1 em{font-style:italic;color:var(--terracota);font-weight:400}
+.lead{font-size:1.12rem;color:var(--suave);max-width:640px}
+section{padding:110px 0}
+.center{text-align:center}
+.center .lead{margin:0 auto}
+
+/* botões */
+.btn{display:inline-flex;align-items:center;gap:.7rem;padding:1.05rem 2rem;border-radius:999px;font-family:var(--sans);font-weight:500;font-size:.95rem;letter-spacing:.06em;text-transform:uppercase;transition:.3s ease;cursor:pointer;border:1px solid transparent}
+.btn-primary{background:var(--bronze);color:#fff;box-shadow:0 12px 30px -12px rgba(176,138,91,.8)}
+.btn-primary:hover{background:var(--cacau);transform:translateY(-2px)}
+.btn-ghost{border-color:currentColor;color:var(--espresso)}
+.btn-ghost:hover{background:var(--espresso);color:var(--creme)}
+.btn svg{width:20px;height:20px;flex:none}
+
+/* nav */
+nav{position:fixed;inset:0 0 auto 0;z-index:50;transition:.35s;padding:22px 0}
+nav.solid{background:rgba(247,242,234,.94);backdrop-filter:blur(10px);padding:12px 0;box-shadow:0 1px 0 rgba(36,24,18,.08)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:.7rem}
+.logo svg{width:38px;height:38px;color:var(--bronze)}
+.logo b{display:block;font-family:var(--serif);font-weight:500;font-size:1.45rem;letter-spacing:.18em;color:var(--espresso);line-height:1}
+.logo small{display:block;font-size:.62rem;letter-spacing:.32em;text-transform:uppercase;color:var(--bronze);margin-top:4px}
+.nav-links{display:flex;gap:2.2rem;align-items:center;font-size:.85rem;letter-spacing:.12em;text-transform:uppercase}
+.nav-links a:not(.btn):hover{color:var(--bronze)}
+.nav-links .btn{padding:.7rem 1.4rem;font-size:.78rem}
+
+/* hero */
+.hero{min-height:100vh;display:flex;align-items:center;padding:140px 0 90px;background:
+  radial-gradient(ellipse at 85% 20%,rgba(205,174,126,.28),transparent 55%),
+  radial-gradient(ellipse at 0% 100%,rgba(142,155,132,.22),transparent 50%),var(--creme);position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:4rem;align-items:center}
+.hero h1{font-size:clamp(2.8rem,6vw,4.9rem);margin:1.2rem 0 1.5rem;letter-spacing:-.01em}
+.hero p.lead{font-size:1.2rem;margin-bottom:2.4rem}
+.hero-ctas{display:flex;gap:1rem;flex-wrap:wrap}
+.chips{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:2.6rem}
+.chip{font-size:.8rem;padding:.45rem 1rem;border:1px solid rgba(176,138,91,.45);border-radius:999px;color:var(--cacau);background:rgba(255,255,255,.5)}
+.hero-img{position:relative;justify-self:end;width:min(440px,100%)}
+.arch{border-radius:240px 240px 18px 18px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 40px 80px -30px rgba(36,24,18,.45)}
+.arch img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.hero-img::before{content:"";position:absolute;inset:-18px 18px 18px -18px;border:1px solid var(--bronze);border-radius:240px 240px 18px 18px;z-index:-1}
+.float-card{position:absolute;left:-60px;bottom:48px;background:var(--espresso);color:var(--creme);padding:1.1rem 1.4rem;border-radius:14px;box-shadow:0 20px 40px -15px rgba(0,0,0,.5);max-width:240px}
+.float-card .eyebrow{color:var(--ouro);font-size:.65rem}
+.float-card p{font-family:var(--serif);font-size:1.25rem;line-height:1.25;margin-top:.3rem}
+
+/* faixa */
+.ribbon{background:var(--espresso);color:var(--areia);padding:22px 0;overflow:hidden;white-space:nowrap}
+.ribbon .track{display:inline-flex;gap:3rem;animation:slide 38s linear infinite;font-family:var(--serif);font-size:1.4rem;font-style:italic}
+.ribbon span::after{content:"✦";margin-left:3rem;color:var(--bronze);font-style:normal;font-size:.9rem}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* dor */
+.pain{background:var(--creme)}
+.pain-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.pain-list{list-style:none;display:grid;gap:1rem;margin:1.8rem 0}
+.pain-list li{display:flex;gap:1rem;align-items:flex-start;padding:1.1rem 1.3rem;background:#fff;border-radius:14px;border:1px solid rgba(176,138,91,.18)}
+.pain-list li::before{content:"";flex:none;width:9px;height:9px;margin-top:.6rem;border-radius:50%;background:var(--terracota)}
+.pain-quote{font-family:var(--serif);font-size:clamp(1.8rem,3.2vw,2.5rem);line-height:1.25;color:var(--espresso);font-style:italic;border-left:2px solid var(--bronze);padding-left:1.6rem}
+.pain-quote small{display:block;font-family:var(--sans);font-style:normal;font-size:.85rem;color:var(--suave);margin-top:1rem;letter-spacing:.05em}
+.pain-img{border-radius:18px;overflow:hidden;aspect-ratio:1/1;margin-bottom:2.4rem}
+.pain-img img{width:100%;height:100%;object-fit:cover}
+
+/* serviços */
+.services{background:var(--espresso);color:var(--areia);position:relative}
+.services h2{color:var(--creme)}
+.services .lead{color:#BFAF9E}
+.svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin-top:3.5rem}
+.svc{background:linear-gradient(160deg,rgba(255,255,255,.06),rgba(255,255,255,.015));border:1px solid rgba(205,174,126,.2);border-radius:18px;padding:2rem 1.6rem;transition:.35s}
+.svc:hover{transform:translateY(-6px);border-color:var(--bronze);background:rgba(176,138,91,.1)}
+.svc .ico{width:44px;height:44px;color:var(--ouro);margin-bottom:1.2rem}
+.svc h3{color:var(--creme);font-size:1.55rem;margin-bottom:.6rem}
+.svc p{font-size:.95rem;color:#BFAF9E;line-height:1.6}
+.svc .tag{display:inline-block;margin-top:1rem;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ouro)}
+.svc.featured{grid-column:span 2;display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;padding:0;overflow:hidden}
+.svc.featured .txt{padding:2rem 1.6rem 2rem 0}
+.svc.featured img{width:100%;height:100%;object-fit:cover;min-height:280px}
+.svc-help{grid-column:span 2;background:linear-gradient(135deg,rgba(176,138,91,.28),rgba(181,101,63,.18));border-color:rgba(205,174,126,.45);display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:.4rem}
+.svc-help h3{font-size:1.9rem}
+.svc-help p{margin-bottom:1rem;color:#E8DCCB}
+.svc-help:hover{transform:none}
+
+/* processo */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;margin-top:3.5rem;counter-reset:s}
+.step{position:relative;padding-top:3.6rem}
+.step::before{counter-increment:s;content:"0" counter(s);position:absolute;top:0;left:0;font-family:var(--serif);font-size:3rem;color:var(--bronze);line-height:1}
+.step::after{content:"";position:absolute;top:1.5rem;left:4.2rem;right:-1rem;height:1px;background:linear-gradient(90deg,var(--bronze),transparent)}
+.step:last-child::after{display:none}
+.step h3{font-size:1.5rem;margin-bottom:.5rem}
+.step p{font-size:.96rem;color:var(--suave)}
+
+/* sobre */
+.about{background:var(--areia)}
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:5rem;align-items:center}
+.about-imgs{position:relative}
+.about-imgs .main{border-radius:18px;overflow:hidden;aspect-ratio:3/4;box-shadow:0 30px 60px -25px rgba(36,24,18,.5)}
+.about-imgs .main img{width:100%;height:100%;object-fit:cover}
+.about-imgs .mini{position:absolute;right:-40px;bottom:-40px;width:46%;border-radius:14px;overflow:hidden;border:6px solid var(--areia);aspect-ratio:1/1}
+.about-imgs .mini img{width:100%;height:100%;object-fit:cover;object-position:50% 25%}
+.creds{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:2rem 0}
+.cred{background:var(--creme);border-radius:14px;padding:1.1rem;font-size:.88rem;line-height:1.4}
+.cred b{display:block;font-family:var(--serif);font-size:1.3rem;color:var(--terracota);font-weight:500;margin-bottom:.2rem}
+.signature{font-family:var(--serif);font-style:italic;font-size:1.5rem;color:var(--cacau);margin-top:1.2rem}
+
+/* diferenciais */
+.diffs{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem;margin-top:3.5rem}
+.diff{text-align:center;padding:2.4rem 1.4rem;border-radius:18px;background:#fff;border:1px solid rgba(176,138,91,.18)}
+.diff svg{width:46px;height:46px;color:var(--bronze);margin:0 auto 1.1rem}
+.diff h3{font-size:1.45rem;margin-bottom:.5rem}
+.diff p{font-size:.93rem;color:var(--suave)}
+
+/* galeria */
+.gallery{background:var(--creme);padding-top:0}
+.g-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:240px;gap:1rem}
+.g-grid figure{border-radius:16px;overflow:hidden;position:relative}
+.g-grid img{width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
+.g-grid figure:hover img{transform:scale(1.06)}
+.g-grid figcaption{position:absolute;left:1rem;bottom:1rem;background:rgba(36,24,18,.75);color:var(--creme);font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;padding:.4rem .8rem;border-radius:999px;backdrop-filter:blur(4px)}
+.g1{grid-row:span 2}.g2{grid-column:span 2}.g5{grid-row:span 2}
+
+/* depoimentos */
+.testi{background:var(--espresso);color:var(--areia);overflow:hidden}
+.testi h2{color:var(--creme)}
+.t-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:3.5rem}
+.t-card{background:rgba(255,255,255,.04);border:1px solid rgba(205,174,126,.18);border-radius:18px;padding:2rem;display:flex;flex-direction:column}
+.t-card .stars{color:var(--ouro);letter-spacing:.2em;margin-bottom:1rem}
+.t-card blockquote{font-family:var(--serif);font-size:1.35rem;line-height:1.4;color:var(--creme);flex:1}
+.t-card cite{display:block;font-style:normal;font-size:.78rem;letter-spacing:.15em;text-transform:uppercase;color:var(--bronze);margin-top:1.4rem}
+.t-card.big{grid-column:span 2}
+.t-card.big blockquote{font-size:1.65rem}
+
+/* eventos */
+.events{background:linear-gradient(rgba(36,24,18,.62),rgba(36,24,18,.78)),url(img/praia.jpg) center 40%/cover;color:var(--creme);text-align:center;padding:130px 0}
+.events h2{color:var(--creme)}
+.events .lead{color:#E8DCCB;margin:0 auto 2.2rem}
+.events .btn-ghost{color:var(--creme)}
+.events .btn-ghost:hover{background:var(--creme);color:var(--espresso)}
+
+/* faq */
+.faq-list{max-width:820px;margin:3rem auto 0}
+details{border-bottom:1px solid rgba(176,138,91,.3);padding:1.4rem 0}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:1rem;font-family:var(--serif);font-size:1.45rem;color:var(--espresso)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--bronze);font-family:var(--sans);font-weight:300;font-size:1.6rem;transition:.3s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin-top:.8rem;color:var(--suave);max-width:720px}
+
+/* final */
+.final{background:var(--areia);text-align:center;position:relative;overflow:hidden}
+.final .lotus-bg{position:absolute;width:520px;height:520px;opacity:.06;left:50%;top:50%;transform:translate(-50%,-50%);color:var(--cacau)}
+.final h2{font-size:clamp(2.4rem,5vw,4rem)}
+.final .lead{margin:0 auto 2.4rem}
+.scarcity{display:inline-block;margin-top:1.6rem;font-size:.9rem;color:var(--cacau)}
+.scarcity::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--terracota);margin-right:.6rem;animation:pulse 1.6s infinite}
+@keyframes pulse{50%{opacity:.25}}
+
+footer{background:var(--espresso);color:#A8988A;padding:60px 0 40px;font-size:.9rem}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:3rem}
+footer .logo b{color:var(--creme)}
+footer h4{font-family:var(--sans);font-size:.75rem;letter-spacing:.25em;text-transform:uppercase;color:var(--ouro);margin-bottom:1rem;font-weight:500}
+footer a:hover{color:var(--ouro)}
+footer li{list-style:none;margin-bottom:.5rem}
+.copy{border-top:1px solid rgba(255,255,255,.08);margin-top:3rem;padding-top:1.6rem;font-size:.8rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+
+.wa-float{position:fixed;right:22px;bottom:22px;z-index:60;width:62px;height:62px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 12px 30px -8px rgba(37,211,102,.7);transition:.3s}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float svg{width:32px;height:32px;color:#fff}
+
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s ease}
+.reveal.in{opacity:1;transform:none}
+
+@media (max-width:980px){
+  section{padding:80px 0}
+  .nav-links a:not(.btn){display:none}
+  .hero-grid,.pain-grid,.about-grid{grid-template-columns:1fr;gap:3rem}
+  .hero{padding-top:120px}
+  .hero-img{justify-self:center;width:min(360px,88%)}
+  .float-card{left:-20px}
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .svc.featured,.svc-help{grid-column:span 2}
+  .steps{grid-template-columns:1fr 1fr}
+  .step::after{display:none}
+  .diffs{grid-template-columns:1fr 1fr}
+  .t-grid{grid-template-columns:1fr}
+  .t-card.big{grid-column:auto}
+  .g-grid{grid-template-columns:1fr 1fr;grid-auto-rows:200px}
+  .g2{grid-column:span 2}
+  .about-imgs .mini{right:-10px;bottom:-30px}
+  .f-grid{grid-template-columns:1fr}
+}
+@media (max-width:600px){
+  body{font-size:16px}
+  .svc-grid,.diffs,.steps{grid-template-columns:1fr}
+  .svc.featured{grid-column:auto;grid-template-columns:1fr}
+  .svc-help{grid-column:auto}
+  .svc-help .btn{width:100%;justify-content:center}
+  .svc.featured .txt{padding:0 1.6rem 2rem}
+  .creds{grid-template-columns:1fr}
+  .hero-ctas .btn{width:100%;justify-content:center}
+  .logo b{font-size:1.15rem}
+  .nav-links .btn{padding:.6rem 1rem;font-size:.7rem}
+}
+</style>
+</head>
+<body>
+
+<!-- ícones reutilizáveis -->
+<svg width="0" height="0" style="position:absolute">
+  <symbol id="lotus" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M32 50c-6-6-8-14-8-20 0-6 3-12 8-17 5 5 8 11 8 17 0 6-2 14-8 20z"/>
+    <path d="M32 50c-9-1-17-6-20-16 4-2 9-2 13 0"/>
+    <path d="M32 50c9-1 17-6 20-16-4-2-9-2-13 0"/>
+    <path d="M32 50C22 51 10 47 4 38c5-2 10-2 14 0"/>
+    <path d="M32 50c10 1 22-3 28-12-5-2-10-2-14 0"/>
+  </symbol>
+  <symbol id="wa" viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.65-2.05-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.04 21.5h-.01a9.4 9.4 0 0 1-4.8-1.31l-.34-.2-3.56.93.95-3.47-.22-.36a9.4 9.4 0 0 1-1.44-5.02c0-5.2 4.23-9.43 9.44-9.43a9.38 9.38 0 0 1 9.43 9.44c0 5.2-4.24 9.42-9.45 9.42zm8.03-17.46A11.27 11.27 0 0 0 12.04.72C5.79.72.7 5.8.7 12.06c0 2 .52 3.95 1.52 5.67L.6 23.6l6.01-1.58a11.3 11.3 0 0 0 5.42 1.38h.01c6.25 0 11.34-5.08 11.34-11.34 0-3.03-1.18-5.88-3.32-8.02z"/></symbol>
+</svg>
+
+<nav id="nav">
+  <div class="wrap">
+    <a href="#topo" class="logo"><svg><use href="#lotus"/></svg><span><b>STUDIO LOBATO</b><small>Massoterapia &amp; Estética</small></span></a>
+    <div class="nav-links">
+      <a href="#tecnicas">Técnicas</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a class="btn btn-primary wa-link" href="#">Agendar</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="topo">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <span class="eyebrow">Massoterapia · Lourdes, Belo Horizonte</span>
+      <h1>Seu corpo pede uma pausa. <em>Aqui ela vira cuidado.</em></h1>
+      <p class="lead">Massagens terapêuticas e relaxantes conduzidas por quem entende de corpo, movimento e equilíbrio. Uma hora no Studio Lobato alivia o cansaço de dias acumulados.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary wa-link" href="#"><svg><use href="#wa"/></svg>Agendar minha sessão</a>
+        <a class="btn btn-ghost" href="#tecnicas">Conhecer as técnicas</a>
+      </div>
+      <div class="chips">
+        <span class="chip">Massoterapeuta &amp; Prof. de Educação Física</span>
+        <span class="chip">Pós-graduanda em Medicina Ayurvédica</span>
+        <span class="chip">Ambiente climatizado</span>
+      </div>
+    </div>
+    <div class="hero-img reveal">
+      <div class="arch"><img src="img/gabi.jpg" alt="Gabi Lobato, massoterapeuta do Studio Lobato"></div>
+      <div class="float-card">
+        <span class="eyebrow">Studio Lobato</span>
+        <p>Bem-estar, equilíbrio e renovação.</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="ribbon" aria-hidden="true">
+  <div class="track">
+    <span>Massagem Relaxante</span><span>Massagem Terapêutica</span><span>Drenagem Linfática</span><span>Ventosaterapia</span><span>Pedras Quentes</span><span>Abhyanga Ayurvédica</span><span>Bambuterapia</span><span>Velaterapia</span>
+    <span>Massagem Relaxante</span><span>Massagem Terapêutica</span><span>Drenagem Linfática</span><span>Ventosaterapia</span><span>Pedras Quentes</span><span>Abhyanga Ayurvédica</span><span>Bambuterapia</span><span>Velaterapia</span>
+  </div>
+</div>
+
+<!-- DOR -->
+<section class="pain">
+  <div class="wrap pain-grid">
+    <div class="reveal">
+      <span class="eyebrow">Você se reconhece?</span>
+      <h2>O corpo avisa antes de <em>pedir socorro.</em></h2>
+      <ul class="pain-list">
+        <li>Ombros e pescoço travados no fim do dia, como se carregassem a semana inteira.</li>
+        <li>Noites mal dormidas, mente acelerada e aquela sensação de nunca desligar.</li>
+        <li>Pernas pesadas, inchaço e retenção que incomodam no dia a dia.</li>
+        <li>Treinos intensos, dores musculares e recuperação que não acompanha a rotina.</li>
+      </ul>
+      <p class="lead">Se marcou pelo menos um item, seu corpo está pedindo uma pausa de verdade. E você não precisa esperar a dor ficar maior para cuidar dele.</p>
+    </div>
+    <div class="reveal">
+      <div class="pain-img"><img src="img/pedras.jpg" alt="Massagem com pedras quentes no Studio Lobato" style="object-position:50% 45%"></div>
+      <p class="pain-quote">“Autocuidado não é luxo, é necessidade.”<small>Gabi Lobato, massoterapeuta</small></p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section class="services" id="tecnicas">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow">Técnicas</span>
+      <h2>Cada corpo pede um <em>cuidado diferente.</em></h2>
+      <p class="lead">Do relaxamento profundo ao alívio de dores, cada atendimento é montado para o que você está sentindo hoje.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc featured reveal">
+        <img src="img/ventosa.jpg" alt="Gabi Lobato aplicando ventosaterapia">
+        <div class="txt">
+          <svg class="ico"><use href="#lotus"/></svg>
+          <h3>Massagem Terapêutica</h3>
+          <p>Foco no alívio de dores musculares, tensões e contraturas. Ideal para quem sofre com dores nas costas, pescoço e ombros, ou para quem treina e precisa recuperar o corpo.</p>
+          <span class="tag">Dores · Tensão · Recuperação</span>
+        </div>
+      </article>
+      <article class="svc reveal">
+        <svg class="ico"><use href="#lotus"/></svg>
+        <h3>Massagem Relaxante</h3>
+        <p>Movimentos suaves que aliviam o estresse e devolvem a sensação de leveza ao corpo e à mente.</p>
+        <span class="tag">Estresse · Sono</span>
+      </article>
+      <article class="svc reveal">
+        <svg class="ico"><use href="#lotus"/></svg>
+        <h3>Drenagem Linfática</h3>
+        <p>Movimentos rítmicos que estimulam o sistema linfático, reduzem o inchaço e melhoram a circulação.</p>
+        <span class="tag">Inchaço · Circulação</span>
+      </article>
+      <article class="svc reveal">
+        <svg class="ico"><use href="#lotus"/></svg>
+        <h3>Ventosaterapia</h3>
+        <p>Técnica milenar de sucção controlada que ativa a circulação, alivia dores e solta a musculatura.</p>
+        <span class="tag">Dores · Circulação</span>
+      </article>
+      <article class="svc reveal">
+        <svg class="ico"><use href="#lotus"/></svg>
+        <h3>Pedras Quentes</h3>
+        <p>O calor terapêutico das pedras aquece o corpo, libera tensões profundas e conduz a um relaxamento intenso.</p>
+        <span class="tag">Relaxamento profundo</span>
+      </article>
+      <article class="svc reveal">
+        <svg class="ico"><use href="#lotus"/></svg>
+        <h3>Abhyanga com Sauna</h3>
+        <p>Massagem ayurvédica com óleos que nutre o corpo e acalma a mente. A sauna potencializa os benefícios.</p>
+        <span class="tag">Ayurveda · Equilíbrio</span>
+      </article>
+      <article class="svc reveal">
+        <svg class="ico"><use href="#lotus"/></svg>
+        <h3>Bambuterapia</h3>
+        <p>Hastes de bambu deslizam, pressionam e mobilizam os tecidos, modelando e revigorando o corpo.</p>
+        <span class="tag">Modelagem · Energia</span>
+      </article>
+      <article class="svc reveal">
+        <svg class="ico"><use href="#lotus"/></svg>
+        <h3>Velaterapia</h3>
+        <p>O óleo morno da vela desliza pela pele em uma massagem envolvente, que aquece, hidrata e relaxa.</p>
+        <span class="tag">Hidratação · Relaxamento</span>
+      </article>
+      <article class="svc reveal">
+        <svg class="ico"><use href="#lotus"/></svg>
+        <h3>Ritual Escalda-pés</h3>
+        <p>Água morninha e toque terapêutico. Um convite para desacelerar, aliviar tensões e renovar as energias.</p>
+        <span class="tag">Ritual · Autocuidado</span>
+      </article>
+      <article class="svc svc-help reveal">
+        <span class="eyebrow">Na dúvida?</span>
+        <h3>Não sabe qual técnica escolher?</h3>
+        <p>Conte o que está sentindo e a Gabi indica o cuidado ideal para o seu corpo hoje.</p>
+        <a class="btn btn-primary wa-link" href="#"><svg><use href="#wa"/></svg>Quero uma indicação</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESSO -->
+<section>
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Como funciona</span>
+      <h2>Do primeiro contato à <em>leveza no dia seguinte.</em></h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><h3>Agende</h3><p>Chame no WhatsApp, conte o que está sentindo e escolha o melhor horário.</p></div>
+      <div class="step reveal"><h3>Acolhimento</h3><p>Uma conversa rápida para entender sua rotina, suas dores e o que seu corpo precisa.</p></div>
+      <div class="step reveal"><h3>Sua sessão</h3><p>Técnica personalizada, ambiente climatizado, produtos de qualidade e tempo só seu.</p></div>
+      <div class="step reveal"><h3>Orientações</h3><p>Dicas para prolongar os benefícios em casa e manter o corpo em equilíbrio.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section class="about" id="sobre">
+  <div class="wrap about-grid">
+    <div class="about-imgs reveal">
+      <div class="main"><img src="img/atendimento.jpg" alt="Gabi Lobato durante atendimento"></div>
+      <div class="mini"><img src="img/gabi2.jpg" alt="Retrato de Gabi Lobato"></div>
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">Quem cuida de você</span>
+      <h2>Prazer, <em>Gabi Lobato.</em></h2>
+      <p>Massoterapeuta, profissional de Educação Física e pós-graduanda em Medicina Ayurvédica. Fundadora do Studio Lobato, uni o conhecimento técnico sobre o corpo humano à sensibilidade de quem enxerga cada atendimento como um encontro.</p>
+      <p style="margin-top:1rem">Para mim, a massoterapia vai além da massagem: é cuidado, presença e atenção aos sinais que o seu corpo transmite. Ouvir histórias, sentir emoções e tocar vidas é o que me move todos os dias.</p>
+      <div class="creds">
+        <div class="cred"><b>Corpo</b>Formação em Educação Física: entendimento real de músculos e movimento.</div>
+        <div class="cred"><b>Técnica</b>Massoterapia terapêutica e relaxante com múltiplas abordagens.</div>
+        <div class="cred"><b>Equilíbrio</b>Visão integrativa da Medicina Ayurvédica.</div>
+      </div>
+      <p class="signature">“Que o trabalho das minhas mãos seja o motivo pelo qual o dia de alguém se tornou mais feliz.”</p>
+    </div>
+  </div>
+</section>
+
+<!-- DIFERENCIAIS -->
+<section>
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow">Por que o Studio Lobato</span>
+      <h2>Bem-estar que <em>transforma.</em></h2>
+    </div>
+    <div class="diffs">
+      <div class="diff reveal">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 22 24 9l16 13v17H8z"/><path d="M19 39V28h10v11"/></svg>
+        <h3>Ambiente acolhedor</h3><p>Espaço climatizado, luz suave e aromas pensados para você desligar do mundo.</p>
+      </div>
+      <div class="diff reveal">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6h12v6l4 6v22a2 2 0 0 1-2 2H16a2 2 0 0 1-2-2V18l4-6z"/><path d="M14 24h20"/></svg>
+        <h3>Produtos de qualidade</h3><p>Óleos e insumos selecionados para nutrir a pele e potencializar cada técnica.</p>
+      </div>
+      <div class="diff reveal">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="24" cy="16" r="7"/><path d="M10 41c1-8 7-13 14-13s13 5 14 13"/></svg>
+        <h3>Atendimento personalizado</h3><p>Nada de protocolo pronto. Cada sessão é ajustada ao seu corpo e ao seu momento.</p>
+      </div>
+      <div class="diff reveal">
+        <svg><use href="#lotus"/></svg>
+        <h3>Corpo e mente</h3><p>A massoterapia acalma o corpo e cura a mente. Você sai mais leve por dentro e por fora.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIA -->
+<section class="gallery">
+  <div class="wrap">
+    <div class="g-grid">
+      <figure class="g1 reveal"><img src="img/ventosa.jpg" alt="Ventosaterapia"><figcaption>Ventosaterapia</figcaption></figure>
+      <figure class="g2 reveal"><img src="img/pedras.jpg" alt="Massagem com pedras quentes" style="object-position:50% 40%"><figcaption>Pedras quentes</figcaption></figure>
+      <figure class="g5 reveal"><img src="img/praia.jpg" alt="Atendimento ao ar livre"><figcaption>Atendimento em eventos</figcaption></figure>
+      <figure class="reveal"><img src="img/ambiente.jpg" alt="Ambiente do studio"><figcaption>Nosso espaço</figcaption></figure>
+      <figure class="reveal"><img src="img/atendimento.jpg" alt="Massagem relaxante" style="object-position:50% 80%"><figcaption>Relaxante</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="testi" id="depoimentos">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow">Depoimentos reais</span>
+      <h2>Quem passa pelas mãos da Gabi <em>volta.</em></h2>
+      <p class="lead" style="color:#BFAF9E">Mensagens enviadas por clientes no WhatsApp e no Instagram depois das sessões.</p>
+    </div>
+    <div class="t-grid">
+      <div class="t-card big reveal">
+        <div class="stars">★★★★★</div>
+        <blockquote>“Foi sensacional, aliviou o meu estresse e me deixou super leve. Dormi tão bem que estou acordando agora. Sua leveza e delicadeza durante a massagem foi incrível!”</blockquote>
+        <cite>Cliente · via WhatsApp</cite>
+      </div>
+      <div class="t-card reveal">
+        <div class="stars">★★★★★</div>
+        <blockquote>“Massagem fantástica! Além das expectativas! Muito obrigado!”</blockquote>
+        <cite>Cliente · via Instagram</cite>
+      </div>
+      <div class="t-card reveal">
+        <div class="stars">★★★★★</div>
+        <blockquote>“É um trabalho incrível e preciso de outra massagem novamente.”</blockquote>
+        <cite>Cliente · via Instagram</cite>
+      </div>
+      <div class="t-card reveal">
+        <div class="stars">★★★★★</div>
+        <blockquote>“Top demais a massagem! Parabéns pelo trabalho!”</blockquote>
+        <cite>Cliente · via Instagram</cite>
+      </div>
+      <div class="t-card reveal">
+        <div class="stars">★★★★★</div>
+        <blockquote>“Muito obrigado, viu! Estou revigorado.”</blockquote>
+        <cite>Cliente · tratamento de dores musculares e ansiedade</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTOS -->
+<section class="events">
+  <div class="wrap reveal">
+    <span class="eyebrow" style="color:var(--ouro)">Eventos, empresas e dias especiais</span>
+    <h2>Levamos a pausa <em style="color:var(--ouro)">até você.</em></h2>
+    <p class="lead">Inaugurações, academias, eventos corporativos e dias de autocuidado com influenciadoras. A Gabi leva a massoterapia para o seu evento e transforma qualquer espaço em um momento de bem-estar.</p>
+    <a class="btn btn-ghost wa-link" data-msg="Olá Gabi! Vim pelo site e quero um orçamento de massoterapia para um evento." href="#"><svg><use href="#wa"/></svg>Solicitar orçamento para evento</a>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow">Dúvidas frequentes</span>
+      <h2>Antes de <em>agendar.</em></h2>
+    </div>
+    <div class="faq-list reveal">
+      <details><summary>Qual técnica é a ideal para mim?</summary><p>Depende do que você está sentindo. Para dores e tensões, a terapêutica e a ventosaterapia costumam ser as mais indicadas. Para estresse e sono, relaxante, pedras quentes ou Abhyanga. Para inchaço, drenagem linfática. Chame no WhatsApp que a Gabi indica a melhor opção para você.</p></details>
+      <details><summary>Preciso agendar com antecedência?</summary><p>Sim. Os atendimentos são individuais e com hora marcada, por isso os horários costumam esgotar. Quanto antes você agendar, mais fácil encontrar o horário ideal.</p></details>
+      <details><summary>Onde fica o Studio Lobato?</summary><p>No bairro Lourdes, em Belo Horizonte/MG. O endereço completo é enviado no momento do agendamento.</p></details>
+      <details><summary>A massagem ajuda com ansiedade e insônia?</summary><p>A massoterapia reduz o estresse, relaxa a musculatura e favorece um sono mais profundo. Muitos clientes relatam que dormem melhor já na primeira sessão. Ela é um complemento ao acompanhamento médico ou psicológico, não um substituto.</p></details>
+      <details><summary>Vocês atendem em eventos?</summary><p>Sim. A Gabi já atendeu inaugurações de academias, eventos esportivos e dias de bem-estar. Solicite um orçamento pelo WhatsApp.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL -->
+<section class="final">
+  <svg class="lotus-bg"><use href="#lotus"/></svg>
+  <div class="wrap reveal" style="position:relative">
+    <span class="eyebrow">Seu momento</span>
+    <h2>Você merece <em>desacelerar.</em></h2>
+    <p class="lead">Permita-se pausar, respirar e cuidar de você. Agende sua sessão e descubra como é acordar leve no dia seguinte.</p>
+    <a class="btn btn-primary wa-link" href="#"><svg><use href="#wa"/></svg>Agendar pelo WhatsApp</a>
+    <div><span class="scarcity">Atendimento individual com hora marcada. Agenda da semana com poucos horários.</span></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <a href="#topo" class="logo"><svg><use href="#lotus"/></svg><span><b>STUDIO LOBATO</b><small>Massoterapia &amp; Estética</small></span></a>
+        <p style="margin-top:1.2rem;max-width:340px">Bem-estar · Equilíbrio · Renovação. Massoterapia com cuidado, presença e atenção aos sinais do seu corpo.</p>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li><a class="wa-link" href="#">WhatsApp (31) 98701-1910</a></li>
+          <li>Lourdes · Belo Horizonte/MG</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Instagram</h4>
+        <ul>
+          <li><a href="https://www.instagram.com/studio.lobato/" target="_blank" rel="noopener">@studio.lobato</a></li>
+          <li><a href="https://www.instagram.com/gabi.lobatopersonal/" target="_blank" rel="noopener">@gabi.lobatopersonal</a></li>
+          <li><a href="https://www.instagram.com/studio.lobatoestetica/" target="_blank" rel="noopener">@studio.lobatoestetica</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy"><span>© <span id="ano"></span> Studio Lobato. Todos os direitos reservados.</span><span>Gabi Lobato · Massoterapeuta</span></div>
+  </div>
+</footer>
+
+<a class="wa-float wa-link" href="#" aria-label="Falar no WhatsApp"><svg><use href="#wa"/></svg></a>
+
+<script>
+const WA='5531987011910';
+const MSG='Olá Gabi! Vim pelo site do Studio Lobato e quero agendar uma massagem.';
+document.querySelectorAll('.wa-link').forEach(a=>{
+  a.href='https://wa.me/'+WA+'?text='+encodeURIComponent(a.dataset.msg||MSG);
+  a.target='_blank';a.rel='noopener';
+});
+document.getElementById('ano').textContent=new Date().getFullYear();
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('solid',scrollY>40),{passive:true});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
